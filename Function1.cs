@@ -28,9 +28,9 @@ namespace Wati
             int num1 = Int32.Parse(data?.num1.ToString());
             int num2 = Int32.Parse(data?.num2.ToString());
 
-            var sum = num1 + num2;
+            var sum = Calculator.Add(num1, num2);
 
-
+            Database.InsertNumbers(num1, num2, sum);
 
 
             return new OkObjectResult(sum);
